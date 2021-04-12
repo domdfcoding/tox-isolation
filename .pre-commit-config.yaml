@@ -31,7 +31,7 @@ repos:
       args:
        - --allow-git
     - id: check-docstring-first
-      exclude: ^(doc-source/conf|__pkginfo__|make_conda_recipe|setup|tests/.*)\.py$
+      exclude: ^(doc-source/conf|__pkginfo__|setup|tests/.*)\.py$
     - id: bind-requirements
 
  - repo: https://github.com/domdfcoding/flake8-dunder-all
@@ -54,11 +54,12 @@ repos:
     - id: rst-inline-touching-normal
 
  - repo: https://github.com/asottile/pyupgrade
-   rev: v2.12.0
+   rev: v2.11.0
    hooks:
     - id: pyupgrade
       args:
        - --py36-plus
+       - --keep-runtime-typing
 
  - repo: https://github.com/Lucas-C/pre-commit-hooks
    rev: v1.1.9
@@ -66,11 +67,11 @@ repos:
     - id: remove-crlf
     - id: forbid-crlf
 
- - repo: https://github.com/domdfcoding/yapf-isort
-   rev: v0.5.5
+ - repo: https://github.com/repo-helper/formate
+   rev: v0.4.3
    hooks:
-    - id: yapf-isort
-      exclude: ^(doc-source/conf|__pkginfo__|make_conda_recipe|setup)\.py$
+    - id: formate
+      exclude: ^(doc-source/conf|__pkginfo__|setup)\.(_)?py$
 
  - repo: https://github.com/domdfcoding/dep_checker
    rev: v0.6.1
