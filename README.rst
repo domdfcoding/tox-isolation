@@ -70,7 +70,7 @@ tox-isolation
 	:target: https://github.com/domdfcoding/tox-isolation/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2022
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2024
 	:alt: Maintenance
 
 .. end shields
