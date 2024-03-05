@@ -48,4 +48,4 @@ known_third_party = [
     "requests",
     "tox",
 ]
-known_first_party = "tox_isolation"
+known_first_party = [ "tox_isolation",]
