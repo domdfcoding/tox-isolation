@@ -1,5 +1,5 @@
 consolekit>=0.1.2
 pluggy>=0.13.1
 py>=1.9.0
-tox>=3.18.0,<4
+tox<4,>=3.18.0
 virtualenv<20.18.0
