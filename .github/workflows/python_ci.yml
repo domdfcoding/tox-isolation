@@ -28,7 +28,7 @@ jobs:
       fail-fast: False
       matrix:
         config:
-          - {python-version: "3.7", testenvs: "py37,build", experimental: False}
+          - {python-version: "3.7", testenvs: "py37", experimental: False}
           - {python-version: "3.8", testenvs: "py38,build", experimental: False}
           - {python-version: "3.9", testenvs: "py39,build", experimental: False}
 
@@ -71,3 +71,4 @@ jobs:
         with:
           name: "coverage-${{ matrix.config.python-version }}"
           path: .coverage
+          include-hidden-files: true
