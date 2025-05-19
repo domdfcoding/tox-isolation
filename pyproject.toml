@@ -7,14 +7,13 @@ name = "tox-isolation"
 version = "0.0.0"
 description = "Runs pytest in isolation."
 readme = "README.rst"
-requires-python = ">=3.6.1"
+requires-python = ">=3.7"
 keywords = []
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -45,7 +44,7 @@ platforms = [ "Windows", "macOS", "Linux",]
 
 [tool.whey]
 base-classifiers = [ "Typing :: Typed",]
-python-versions = [ "3.6", "3.7", "3.8", "3.9",]
+python-versions = [ "3.7", "3.8", "3.9",]
 python-implementations = [ "CPython",]
 platforms = [ "Windows", "macOS", "Linux",]
 license-key = "MIT"

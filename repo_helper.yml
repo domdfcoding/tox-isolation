@@ -15,7 +15,6 @@ on_pypi: False
 min_coverage: 70
 
 python_versions:
-  - 3.6
   - 3.7
   - 3.8
   - 3.9
