@@ -49,7 +49,8 @@ isolate_dirs = tests
 
 	assert not err
 
-	output = output_.decode("UTF-8")
+	_ansi_re = re.compile(r"\033\[[;?0-9]*[a-zA-Z]")
+	output = _ansi_re.sub('', (output_.decode("UTF-8")))
 
 	print(output)
 
