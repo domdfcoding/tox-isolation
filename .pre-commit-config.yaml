@@ -92,5 +92,9 @@ repos:
     - id: dep_checker
       args:
        - tox_isolation
+       - --work-dir
+       - src/
+       - --req-file
+       - ../requirements.txt
 
 # Custom hooks can be added below this comment

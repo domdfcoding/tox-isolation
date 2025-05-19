@@ -1,6 +1,6 @@
 [build-system]
-requires = [ "setuptools!=61.*,<=67.1.0,>=40.6.0", "wheel>=0.34.2",]
-build-backend = "setuptools.build_meta"
+requires = [ "flit-core<4,>=3.2",]
+build-backend = "flit_core.buildapi"
 
 [project]
 name = "tox-isolation"
@@ -20,7 +20,8 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Typing :: Typed",
 ]
-dynamic = [ "dependencies",]
+dependencies = [ "consolekit>=0.1.2", "pluggy>=0.13.1", "py>=1.9.0", "tox<4,>=3.18.0", "virtualenv<20.18.0",]
+dynamic = []
 
 [project.license]
 file = "LICENSE"
