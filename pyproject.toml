@@ -18,6 +18,7 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
+    "Typing :: Typed",
 ]
 dependencies = [ "consolekit>=0.1.2", "pluggy>=0.13.1", "py>=1.9.0", "tox<4,>=3.18.0", "virtualenv<20.18.0",]
 dynamic = []
@@ -43,7 +44,7 @@ include-package-data = true
 platforms = [ "Windows", "macOS", "Linux",]
 
 [tool.whey]
-base-classifiers = []
+base-classifiers = [ "Typing :: Typed",]
 python-versions = [ "3.7", "3.8", "3.9",]
 python-implementations = [ "CPython",]
 platforms = [ "Windows", "macOS", "Linux",]
