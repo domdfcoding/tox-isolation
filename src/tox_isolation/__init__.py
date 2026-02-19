@@ -96,7 +96,7 @@ def tox_runtest(venv: VirtualEnv, redirect):
 				fixup_coverage(
 						old_base=envconfig.get_envsitepackagesdir(),
 						new_base=source_dir,
-						coverage_filename=source_dir / ".coverage"
+						coverage_filename=source_dir / ".coverage",
 						)
 
 		return True  # Return non-None to indicate plugin has completed

@@ -33,8 +33,8 @@ requires = pip>=20.2.1
 deps = pytest
 commands = python -m pytest tests/
 isolate_dirs = tests
-"""
-					)
+""",
+					),
 			)
 
 	(repo / "setup.py").write_lines([
