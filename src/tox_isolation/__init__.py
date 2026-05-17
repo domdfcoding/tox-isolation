@@ -32,14 +32,15 @@ import pathlib
 import shutil
 import sqlite3
 from tempfile import TemporaryDirectory
+from typing import Optional
 
 # 3rd party
-import pluggy  # type: ignore
+import pluggy
 import py.path
 from consolekit.terminal_colours import Style
 from domdf_python_tools.typing import PathLike
-from tox.config import Parser, TestenvConfig  # type: ignore
-from tox.venv import VirtualEnv  # type: ignore
+from tox.config import Parser, TestenvConfig  # type: ignore[import-untyped]
+from tox.venv import VirtualEnv  # type: ignore[import-untyped]
 
 __all__ = ["tox_addoption", "tox_runtest", "fixup_coverage"]
 
@@ -53,7 +54,7 @@ hookimpl = pluggy.HookimplMarker("tox")
 
 
 @hookimpl
-def tox_addoption(parser: Parser):  # noqa: D103
+def tox_addoption(parser: Parser) -> None:  # noqa: D103
 	parser.add_testenv_attribute(
 			name="isolate_dirs",
 			type="line-list",
@@ -64,7 +65,7 @@ def tox_addoption(parser: Parser):  # noqa: D103
 
 
 @hookimpl(tryfirst=True)
-def tox_runtest(venv: VirtualEnv, redirect):
+def tox_runtest(venv: VirtualEnv, redirect: bool) -> Optional[bool]:  # noqa: PRM002
 	"""
 	Create a temporary directory, symlink the test directory into it, and chdir into that directory.
 	"""
@@ -108,7 +109,7 @@ def fixup_coverage(
 		old_base: PathLike,
 		new_base: PathLike,
 		coverage_filename: PathLike = ".coverage",
-		):
+		) -> None:
 	"""
 	Replaces the start of filenames in .coverage files.
 

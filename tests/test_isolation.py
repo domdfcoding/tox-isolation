@@ -4,10 +4,10 @@ from subprocess import PIPE, Popen
 from textwrap import dedent
 
 # 3rd party
-from domdf_python_tools.paths import in_directory
+from domdf_python_tools.paths import in_directory, PathPlus
 
 
-def test_isolation(tmp_pathplus):
+def test_isolation(tmp_pathplus: PathPlus):
 
 	repo = tmp_pathplus / "demo_repo"
 	repo.mkdir()
