@@ -4,7 +4,7 @@ from subprocess import PIPE, Popen
 from textwrap import dedent
 
 # 3rd party
-from domdf_python_tools.paths import in_directory, PathPlus
+from domdf_python_tools.paths import PathPlus, in_directory
 
 
 def test_isolation(tmp_pathplus: PathPlus):

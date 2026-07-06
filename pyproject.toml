@@ -80,4 +80,4 @@ reformat = true
 [tool.snippet-fmt.languages.json]
 
 [tool.dep_checker]
-allowed_unused = ["virtualenv"]
+allowed_unused = [ "virtualenv",]
