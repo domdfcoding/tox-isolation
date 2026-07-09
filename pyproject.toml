@@ -20,7 +20,14 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Typing :: Typed",
 ]
-dependencies = [ "consolekit>=0.1.2", "pluggy>=0.13.1", "py>=1.9.0", "tox<4,>=3.18.0", "virtualenv<20.18.0",]
+dependencies = [
+    "consolekit>=0.1.2",
+    "domdf-python-tools>=3.10.0",
+    "pluggy>=0.13.1",
+    "py>=1.9.0",
+    "tox<4,>=3.18.0",
+    "virtualenv<20.18.0",
+]
 dynamic = []
 
 [project.license]
@@ -80,4 +87,4 @@ reformat = true
 [tool.snippet-fmt.languages.json]
 
 [tool.dep_checker]
-allowed_unused = ["virtualenv"]
+allowed_unused = [ "virtualenv",]
